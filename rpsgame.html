@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RPS</title>
+    <link rel="stylesheet" type="text/css" href="rpscss.css">
+    <script src="rps.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="requestName()">
+    <div class="grid-container">
+        <div class="grid-header">
+            <h1>Rock Paper Scissors<br></h1>
+            <p>First to 5 wins</p>
+        </div>
+        <div class="grid-player1"><i class="fa fa-child" style="font-size:100px;"></i></div>
+
+        <div class="grid-player-icons" id="iconsPlayer">
+            <div><button class="buttons" onclick="randomComp('rock')" type="button"><span
+                        class="fa fa-hand-rock-o"></span></button></div>
+            <div><button class="buttons" onclick="randomComp('paper')" type="button"><span
+                        class="fa fa-hand-paper-o"></span></button></div>
+            <div><button class="buttons" onclick="randomComp('scissors')" type="button"><span
+                        class="fa fa-hand-scissors-o"></span></button></div>
+        </div>
+
+</body>
+
+</html>
