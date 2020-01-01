@@ -10,7 +10,7 @@
 
 </head>
 
-<body onload="requestName()">
+<body>
     <div class="grid-container">
         <div class="grid-header">
             <h1>Rock Paper Scissors<br></h1>
@@ -27,14 +27,13 @@
                         class="fa fa-hand-scissors-o"></span></button></div>
         </div>
 
-        <div class="playerScore">
+        <div class="score-player">
             <button class="score">
-                <p id="playerName"></p>
+                <p>User</p>
             </button>
             <p id="playerCount">0</p>
         </div>
-
-        <div class="computerScore">
+        <div class="score-computer">
             <button class="score">
                 <p>Computer</p>
             </button>
@@ -43,7 +42,6 @@
 
         <div class="gridStart">
             <div><button class="startButton" onclick="restartGame('start')" type="button">Start New Game</button></div>
-            <div><button class="startButton" onclick="restartGame('end')" type="button">End Game</button></div>
         </div>
 
         <div class="gridResult">
@@ -51,7 +49,9 @@
         </div>
 
         <div class="grid-icons-comp" id="iconsComputer">
-            <div><span id="rock" class="fa fa-ravelry"></span></div>
+            <div><span id="Rock" class="fa fa-ravelry"></span></div>
+            <div><span id="Paper" class="fa fa-ravelry"></span></div>
+            <div><span id="Scissors" class="fa fa-ravelry"></span></div>
         </div>
 
         <div class="grid-comp"><i class="fa fa-desktop"></i></div>
