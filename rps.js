@@ -1,9 +1,12 @@
-function restartGame(btnClick) {
+let countWin = 0;
+let countLose = 0;
+
+function restartGame(click) {
     /*if start is clicked everything is visible, set to 0 and request a name*/
     if (click === "start") {
-        let countLose = 0;
-        let countWin = 0;
+        countLose = 0;
         document.getElementById("playerCount").innerHTML = countLose;
+        countWin = 0;
         document.getElementById("computerCount").innerHTML = countWin;
         document.getElementById("iconsPlayer").style.display = "block";
         document.getElementById("iconsComputer").style.display = "block";
@@ -32,7 +35,6 @@ function randomComp(get) {
     } else {
         compSelection = "Scissors";
     }
-    roundCount();
     playGame(userSelection, compSelection);
 }
 
@@ -43,48 +45,38 @@ function playGame(user, computer) {
     } else if (user === "Rock" && computer === "Scissors") {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Win!<br>" + user + " beats " + computer;
-        gameWin();
+        ++countWin;
         document.getElementById("playerCount").innerHTML = countWin;
     } else if (user === "Rock" && computer === "Paper") {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Lose!<br>" + computer + " beats " + user;
-        gameLose();
+        ++countLose;
         document.getElementById("computerCount").innerHTML = countLose;
     } else if (user === "Scissors" && computer === "Rock") {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Lose!<br>" + computer + " beats " + user;
-        gameLose();
+        ++countLose;
         document.getElementById("computerCount").innerHTML = countLose;
     } else if (user === "Scissors" && computer === "Paper") {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Win!<br>" + user + " beats " + computer;
-        gameWin();
+        ++countWin;
         document.getElementById("playerCount").innerHTML = countWin;
     } else if (user === "Paper" && computer === "Rock") {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Win!<br>" + user + " beats " + computer;
-        gameWin();
+        ++countWin;
         document.getElementById("playerCount").innerHTML = countWin;
     } else {
         funcForAnimation(computer);
         document.getElementById("result").innerHTML = "You Lose!<br>" + computer + " beats " + user;
-        gameLose();
+        ++countLose;
         document.getElementById("computerCount").innerHTML = countLose;
     }
 }
 
-function gameWin() {
-    let countWin = 0;
-    ++countWin;
-    if (countWin = 5) {
-        setTimeout(restartGame, 1800);
-    }
-}
-
-function gameLose() {
-    let countLose = 0;
-    ++countLose;
-    if (countLose = 5) {
+function gameOver() {
+    if (countWin = 5 || (countLose = 5)) {
         setTimeout(restartGame, 1800);
     }
 }
