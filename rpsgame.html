@@ -27,6 +27,37 @@
                         class="fa fa-hand-scissors-o"></span></button></div>
         </div>
 
+        <div class="playerScore">
+            <button class="score">
+                <p id="playerName"></p>
+            </button>
+            <p id="playerCount">0</p>
+        </div>
+
+        <div class="computerScore">
+            <button class="score">
+                <p>Computer</p>
+            </button>
+            <p id="computerCount">0</p>
+        </div>
+
+        <div class="gridStart">
+            <div><button class="startButton" onclick="restartGame('start')" type="button">Start New Game</button></div>
+            <div><button class="startButton" onclick="restartGame('end')" type="button">End Game</button></div>
+        </div>
+
+        <div class="gridResult">
+            <h3 id="result"></h3>
+        </div>
+
+        <div class="grid-icons-comp" id="iconsComputer">
+            <div><span id="rock" class="fa fa-ravelry"></span></div>
+        </div>
+
+        <div class="grid-comp"><i class="fa fa-desktop"></i></div>
+        <div class="grid-footer">
+        </div>
+    </div>
 </body>
 
 </html>
